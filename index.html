@@ -1,29 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Password generator app</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
 
-  Password Generator
-
-  P4$5W0rD!
-
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
-
-</body>
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="title">Password Generator</h1>
+      <div class="content-container">
+        <div class="password-field-container">
+          <div class="password-display">
+            <label for="Password"></label>
+            <input
+              name="Password"
+              type="text"
+              id="password-field"
+              placeholder="P4$5W0rD!"
+            />
+            <span class="copied" id="copied">COPIED</span>
+            <img src="./images/icon-copy.svg" alt="copy image" id="copyImage" />
+          </div>
+        </div>
+        <div class="options-container">
+          <div class="character-length-container">
+            <div class="character-length-label-container">
+              <label for="slider">Character Length</label>
+              <p id="slider-value">1</p>
+            </div>
+            <div class="slider-container">
+              <input
+                type="range"
+                name="character-length"
+                min="1"
+                max="20"
+                id="slider"
+              />
+            </div>
+          </div>
+          <div class="checkbox-container">
+            <ul>
+              <li>
+                <input type="checkbox" id="Uppercase" /><span>Include Uppercase Letters</span>
+              </li>
+              <li>
+                <input type="checkbox" id="Lowercase" /><span>Include Lowercase Letters</span>
+              </li>
+              <li><input type="checkbox" id="Numbers" /><span>Include Numbers</span></li>
+              <li><input type="checkbox" id="Symbols"/><span>Include Symbols</span></li>
+            </ul>
+          </div>
+          <div class="generate-container">
+            <div class="strength-container">
+              <h2>STRENGTH</h2>
+              <div class="bars-container">
+                <span id="signal-strength" class="signal-strength">WEAK</span>
+              <div class="strength-bars-container">
+                <div class="strengthbar" id="strength-bar1"></div>
+                <div class="strengthbar" id="strength-bar2"></div>
+                <div class="strengthbar" id="strength-bar3"></div>
+                <div class="strengthbar" id="strength-bar4"></div>
+              </div>
+              </div>
+              
+            </div>
+          </div>
+          <button id="generate-button">
+            GENERATE
+            <span
+              ><img src="./images/icon-arrow-right.svg" alt=""
+            /></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
