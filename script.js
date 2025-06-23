@@ -64,7 +64,7 @@ function generatePassword() {
     }
     if (lowercaseCheckBox.checked) {
         characters += lowercase;
-       
+            
     } 
     if (numbersCheckBox.checked) {
         characters += numbers;
